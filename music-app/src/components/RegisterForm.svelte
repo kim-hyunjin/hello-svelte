@@ -56,6 +56,9 @@
                     type="text"
                     class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                     placeholder="Enter Name"
+                    required
+                    minlength="3"
+                    maxlength="100"
             />
             </label>
         </div>
@@ -68,6 +71,7 @@
                     name="email"
                     class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                     placeholder="Enter Email"
+                    required
             />
             </label>
         </div>
@@ -79,6 +83,9 @@
                     type="number"
                     name="age"
                     class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+                    required
+                    min="18"
+                    max="100"
             />
             </label>
         </div>
@@ -90,6 +97,9 @@
                         type="password"
                         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                         placeholder="Password"
+                        required
+                        minlength="9"
+                        maxlength="100"
                 />
             </label>
 
@@ -103,6 +113,9 @@
                     name="confirmPassword"
                     class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                     placeholder="Confirm Password"
+                    required
+                    minlength="9"
+                    maxlength="100"
             />
             </label>
         </div>
@@ -113,6 +126,7 @@
                     bind:value={user.country}
                     name="country"
                     class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+                    required
             >
                 <option value="USA">USA</option>
                 <option value="Mexico">Mexico</option>
@@ -131,6 +145,7 @@
                         value="1"
                         type="checkbox"
                         class="w-4 h-4 float-left -ml-6 mt-1 rounded"
+                        required
                 />
                 Accept terms of service</label>
             </div>
