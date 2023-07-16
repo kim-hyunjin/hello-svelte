@@ -40,11 +40,22 @@ function createUserStore() {
         set({userLoggedIn: false})
     }
 
+    async function checkAuth() {
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                set({userLoggedIn: true})
+            } else {
+                set({userLoggedIn: false})
+            }
+        })
+    }
+
     return {
         subscribe,
         register,
         authenticate,
-        signOut
+        signOut,
+        checkAuth
     }
 }
 
