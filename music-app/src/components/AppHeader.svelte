@@ -1,10 +1,6 @@
 <script lang="ts">
     import {userStore} from "@/stores/userStore";
     import {modalStore} from "@/stores/modal";
-
-    userStore.subscribe(state => {
-        console.log(state);
-    })
 </script>
 <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
