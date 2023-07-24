@@ -18,7 +18,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-initializeFirestore(app, { localCache: persistentLocalCache() })
+function initFirebase() {
+    initializeFirestore(app, { localCache: persistentLocalCache() })
+}
 
 const auth = getAuth(app)
 const db = getFirestore(app)
@@ -28,4 +30,4 @@ const usersCollection = collection(db, 'users')
 const songsCollection = collection(db, 'songs')
 const commentsCollection = collection(db, 'comments')
 
-export { auth, db, usersCollection, songsCollection, commentsCollection, storage }
+export { auth, db, usersCollection, songsCollection, commentsCollection, storage, initFirebase }
